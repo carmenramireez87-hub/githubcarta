@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    height: 100vb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("fondo4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Cutive Mono", sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+/*envelope-screen*/
+#envelope-container {
+    text-align: center;
+    cursor: pointer;
+    font-family: "pacifico", sans-serif;
+    font-size: 50px;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+#envelope {
+    width: 200px;
+    animation: pulse 1.5s infinite;
+    cursor: pointer;
+}
+
+#letter-container {
+    display: none;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-window {
+    width: 90vw;
+    max-width: 800px;
+    aspect-ratio: 3/2;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(papelcopia.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    gap: 3px;
+    padding-top: 180px;
+
+    transform: scale(1.2);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.letter-window.open {
+    transform: scale(1);
+    opacity: 1;
+}
+
+h2 {
+    font-size: 50px;
+    margin:0;
+}
+
+p {
+    font-size: 25px;
+}
